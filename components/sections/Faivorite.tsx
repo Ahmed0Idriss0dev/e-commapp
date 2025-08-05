@@ -31,12 +31,11 @@ export default function Faivorite() {
     <div className="flex justify-end bg-neutral-800/10 inset-0 fixed z-50 items-center w-full d-dvh">
         
         <div className="w-96 h-dvh bg-white">
-          {Faivorite.map(({ price ,  id , title }) => (
+          {Faivorite.map(({ price , id , title ,image }) => (
              <div key={id} className="flex p-2 justify-between items-center h-40 w-full border border-neutral-200">
-               {/* <Image src={image} width={600} height={600}  alt={title} className='w-40  h-full   rounded-2xl object-cover' /> */}
+               <Image src={image} width={600} height={600}  alt={title} className='w-40  h-full   rounded-2xl object-cover' />
                 <div className="">
                     <h1>{title} </h1>
-                    {/* <p>{quantity} </p> */}
                     <button onClick={()=> dispatch(removeFromCart(id))}> 
                         <Delete/>
                     </button>

@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 interface FavoriteState {
-  items: { id: number; title: string; price: number }[]
+  items: { id: number; title: string; price: number , image:string }[]
 }
 
 const initialState: FavoriteState = {
@@ -12,7 +12,7 @@ const favoriteSlice = createSlice({
   name: 'favorite',
   initialState,
   reducers: {
-    addToFavorite: (state, action: PayloadAction<{ id: number; title: string; price: number }>) => {
+    addToFavorite: (state, action: PayloadAction<{ id: number; title: string; price: number , image:string }>) => {
       const exists = state.items.find((item) => item.id === action.payload.id)
       if (!exists) {
         state.items.push(action.payload)

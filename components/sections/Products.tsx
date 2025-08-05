@@ -7,7 +7,7 @@ import { Product } from '@/types';
 const Products = () => {
     const { data, isLoading, isError } = useQuery({
     queryFn: async () => await getProducts(),
-    queryKey: ["products"], //Array according to Documentation
+    queryKey: ["products"], 
   });
   if(isLoading){
     return (

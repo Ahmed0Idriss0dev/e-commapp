@@ -10,17 +10,18 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
---color-store-50: #ebfef6;
---color-store-100: #d0fbe6;
---color-store-200: #a4f6d2;
---color-store-300: #6aebbb;
---color-store-400: #2fd89e;
---color-store-500: #0abf88;
---color-store-600: #00a274;
---color-store-700: #007c5c;
---color-store-800: #03624a;
---color-store-900: #04503e;
---color-store-950: #012d24;
+--color-store-50: #f0f1ff;
+--color-store-100: #e4e5ff;
+--color-store-200: #cdd0ff;
+--color-store-300: #a6a8ff;
+--color-store-400: #7773ff;
+--color-store-500: #4c3bff;
+--color-store-600: #3614ff;
+--color-store-700: #2200ff;
+--color-store-800: #1d01d6;
+--color-store-900: #1a03af;
+--color-store-950: #0a0077;
+
 
 
 

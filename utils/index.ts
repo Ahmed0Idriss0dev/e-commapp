@@ -1,11 +1,19 @@
-import { products } from "@/db"
 
-const baseURl = 'https://fakestoreapi.com/products'
+const baseURl = '/api'
 export async function getProducts(){
     try {
-        // const res = await fetch(baseURl)
-        // const data = await res.json()
-        return products
+        const res = await fetch(baseURl)
+        const data = await res.json()
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+ }
+ export async function getProductById(id:number){
+    try {
+        const res = await fetch(`${baseURl}/${id}`)
+        const data = await res.json()
+        return data
     } catch (error) {
         console.log(error)
     }
