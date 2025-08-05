@@ -21,7 +21,7 @@ const page = (  { params }: { params: Promise< { ProductsId: number }> }) => {
   const ProDuct:Product = data
 const {image ,description ,id ,title ,price} = ProDuct
   return (
-    <div className='px-80'>
+    <div className=' px-4 sm:px-50 md:px-80'>
         <div className="">
       <Image src={image} width={600} height={600}  alt={title} className='w-full h-full rounded-2xl object-cover' />
          <div className="grid py-2  w-full h-40 grid-cols-4 gap-2">
@@ -35,15 +35,15 @@ const {image ,description ,id ,title ,price} = ProDuct
             <p>{description}  </p>
             <div className="flex items-center gap-1">
                             <p>{price} USD </p>
-                            <p className='underline opacity-25'>{price + 12} USD </p>
+                            <p className='underline opacity-25'>{price * 2} USD </p>
 
 
             </div>
+         </div>
             <button  className=' bg-store-950 flex justify-center items-center gap-2 text-white w-70 h-12 rounded-md'>
           <ShoppingCart/>
           <span>shop now</span>
         </button>  
-         </div>
         </div>
     </div>
   )
