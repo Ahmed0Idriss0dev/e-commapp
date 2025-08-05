@@ -5,6 +5,7 @@ import Image from 'next/image'
 import React from 'react'
 import { addToCart } from '@/store/CardSlice'
 import { addToFavorite } from '@/store/FaivoriteSlice'
+import Link from 'next/link'
 const Card = ({ category, id, price, title, image }: Product) => {
   const dispatch = useAppDispatch()
   return (
@@ -20,10 +21,9 @@ const Card = ({ category, id, price, title, image }: Product) => {
         </div>    
         </div>
         <div className="flex w-full gap-2 justify-between items-center">
-
-        <button onClick={() => dispatch(addToCart({ id, price, title, image }))} className=' bg-store-500 flex justify-center items-center gap-2 text-white w-full h-12 rounded-md'>
+         <Link href={`/products/${id}` } className='bg-store-500 flex justify-center items-center gap-2 text-white w-full h-12 rounded-md' >More</Link>
+        <button onClick={() => dispatch(addToCart({ id, price, title, image }))} className=' bg-store-500 flex justify-center items-center gap-2 text-white w-14 h-12 rounded-md'>
           <ShoppingCart />
-          <span>Add to card</span>
         </button>
         <button onClick={() => dispatch(addToFavorite({ id, price, title  , image}))} className='w-12 flex justify-center items-center h-12 border border-store-950/15 rounded-md '>
           <Heart />

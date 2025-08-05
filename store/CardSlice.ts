@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 interface CartState {
-  items: { id: number; title: string; quantity: number  , image:string}[]
+  items: { id: number; title: string; quantity: number  ,price:number ,  image:string}[]
 }
 
 const initialState: CartState = {

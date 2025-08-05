@@ -16,7 +16,7 @@ export default function CartPage() {
     } 
         
 
-  
+    const totle = cartItems.reduce((total, item) => total + item.price * item.quantity, 0)
   return (
     <>
      <button className="relative" onClick={openclose}> 
@@ -34,6 +34,7 @@ export default function CartPage() {
         <div className=" p-4">
            <h1 className="text-2xl font-semibold">Classic White T-Shirt</h1>
            <p> A soft, everyday essential made from 100% cotton.</p>
+           <h1> Total Amount  :{totle} USD </h1>
         </div>
           {cartItems.map(({image , id , title , quantity}) => (
              <div key={id} className="flex p-2 justify-start gap-2 items-center h-40 w-full border border-neutral-200">
@@ -41,8 +42,8 @@ export default function CartPage() {
                 <div className="">
                     <h1>{title} </h1>
                     <p>{quantity} </p>
-                    <button onClick={()=> dispatch(removeFromCart(id))}> 
-                        <Trash/>
+                    <button className="w-40 h-9 bg-store-800 text-white rounded-md" onClick={()=> dispatch(removeFromCart(id))}> 
+                        remove
                     </button>
                 </div>
              </div>
@@ -50,7 +51,7 @@ export default function CartPage() {
           </div>
           <div className="p-2.5">
 
- <button  className=' bg-store-950 flex justify-center items-center gap-2 text-white w-full h-12 rounded-md'>
+          <button  className=' bg-store-950 flex justify-center items-center gap-2 text-white w-full h-12 rounded-md'>
           <ShoppingCart/>
           <span>shop now</span>
         </button>    </div>
